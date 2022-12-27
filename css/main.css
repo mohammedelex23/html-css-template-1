@@ -10,6 +10,9 @@
 /* End Variables */
 
 /* Start Global */
+body {
+  font-family: Lato, sans-serif;
+}
 /* Start Common */
 .section-header {
   text-align: center;
