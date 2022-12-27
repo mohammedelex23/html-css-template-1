@@ -1,0 +1,513 @@
+/* Start Variables */
+:root {
+  --main-color: #10cab7;
+  --second-color: #2c4755;
+  --third-color: #1f2021;
+  --transition-duration: 0.3s;
+  --section-padding: 30px;
+  --section-background: #d7d7d7;
+}
+/* End Variables */
+
+/* Start Global */
+/* Start Common */
+.section-header {
+  text-align: center;
+}
+.section-header h3 {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #ebeced;
+  text-transform: uppercase;
+}
+.section-header p {
+  margin-top: -25px;
+  color: #575757;
+  text-transform: lowercase;
+}
+/* End Common */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+h2,
+h3,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+  .section-header h3 {
+    font-size: 80px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 962px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Extra extra large devices (extra large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+/* End Global */
+
+/* Start .header */
+.header {
+  padding: 20px;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .container .logo {
+  width: 50px;
+}
+.header .container .nav {
+  position: relative;
+}
+/* nav icon */
+.header .nav .icon {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.header .nav:hover .icon span:nth-child(2) {
+  width: 100%;
+}
+.header .container .nav:hover .nav-links {
+  display: block;
+}
+.header .nav .icon span {
+  background-color: gray;
+  height: 2px;
+}
+.header .nav .icon span:not(:last-child) {
+  margin-bottom: 5px;
+}
+.header .nav .icon span:nth-child(1) {
+  width: 100%;
+}
+.header .nav .icon span:nth-child(2) {
+  width: 50%;
+  transition: var(--transition-duration, 0.3s);
+}
+.header .nav .icon span:nth-child(3) {
+  width: 100%;
+}
+/* nav links */
+.header .container .nav .nav-links {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 20px);
+  background-color: #eee;
+  min-width: 200px;
+  display: none;
+  z-index: 1;
+}
+.header .nav .nav-links::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-width: 15px;
+  border-style: solid;
+  border-color: transparent transparent #eee transparent;
+  top: -30px;
+  right: 0px;
+}
+.header .nav .nav-links a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: var(--second-color, #2c4755);
+  cursor: pointer;
+  border-bottom: 1px solid #c8cac9;
+  transition: var(--transition-duration, 0.3s);
+  font-size: 18px;
+}
+.header .nav .nav-links a:hover {
+  padding-left: 20px;
+}
+/* End .header */
+/* Start Welcome */
+.welcome {
+  width: 100%;
+  position: relative;
+  height: calc(100vh - 60px);
+  background-image: url("../images/welcome.jpg");
+}
+.welcome .overlay {
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background-color: #6c746dcc;
+}
+.welcome .welcome-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.welcome .welcome-message h1 {
+  margin: 0;
+  margin-bottom: 10px;
+  color: var(--main-color, #10cab7);
+  font-size: 24px;
+}
+.welcome .welcome-message p {
+  color: #dfdfdf;
+  max-width: 280px;
+  text-align: center;
+  margin: auto;
+}
+/* Extra Small Devices */
+@media only screen and (max-width: 335px) {
+  .welcome .welcome-message {
+    width: 100%;
+  }
+}
+/* Small Devices */
+@media only screen and (min-width: 600px) {
+  .welcome .welcome-message h1 {
+    font-size: 40px;
+  }
+}
+/* End Welcome */
+/* Start Features */
+.features {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.features h3 {
+  font-size: 16px;
+  color: var(--third-color);
+}
+.features .wrapper {
+  text-align: center;
+  padding: 20px;
+}
+.features .wrapper p {
+  color: #2c2c2c;
+}
+.features .wrapper i {
+  font-size: 40px;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+/* Small devices and above */
+@media only screen and (min-width: 768px) {
+  .features .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* background-color: red; */
+  }
+  .features .wrapper {
+    max-width: 300px;
+  }
+}
+/* End Features */
+/* Start Services */
+.services {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-color: var(--section-background);
+}
+.services .container .col {
+  text-align: center;
+  padding: 20px;
+}
+.services .row {
+  padding: 10px;
+}
+.services .row p {
+  color: #2c2c2c;
+}
+.services .row i {
+  font-size: 40px;
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+.services .container .col:last-child {
+  display: none;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .services .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .services .container .col {
+    max-width: 400px;
+    text-align: start;
+    position: relative;
+    z-index: 1;
+  }
+  .services .col .row {
+    display: flex;
+  }
+  .services .col .row i {
+    margin-right: 40px;
+  }
+}
+
+.services .container .col img {
+  max-width: 80%;
+  max-height: 350px;
+}
+.services .container .col:last-child:after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: calc(100% + 40px);
+  background-color: var(--second-color);
+  position: absolute;
+  top: -20px;
+  right: 40px;
+  z-index: -1;
+}
+@media (min-width: 1400px) {
+  .services .container .col:last-child {
+    display: block;
+  }
+}
+/* End Services */
+/* Start Portfolio */
+.portfolio {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.portfolio .container {
+  margin: auto;
+  padding: 20px 10px;
+}
+.portfolio .container .card {
+  background-color: #f1f1f1;
+  margin-bottom: 10px;
+}
+.portfolio .container .card img {
+  width: 100%;
+  height: 200px;
+}
+.portfolio .container .card .text {
+  padding: 20px;
+}
+.portfolio .container .card h6 {
+  color: var(--third-color);
+  font-size: 14px;
+}
+.portfolio .container .card p {
+  margin-top: 10px;
+  color: #2c2c2c;
+}
+@media (min-width: 360px) {
+  .portfolio .container .card {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .portfolio .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .portfolio .container .card {
+    width: 48%;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .portfolio .container .card {
+    width: 30%;
+  }
+}
+
+/* Start Portfolio */
+/* Start About */
+.about {
+  background-color: var(--section-background);
+  padding: var(--section-padding);
+}
+.about .container {
+  padding: 20px;
+}
+.about .container p:first-child {
+  font-weight: bold;
+}
+.about .container hr {
+  width: 60%;
+  margin-left: 0;
+  border-width: 1px;
+  border-color: transparent;
+  border-bottom-color: var(--main-color);
+}
+.about .container .row:first-child {
+  display: none;
+}
+.about .container .row img {
+  width: 100%;
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .about .container {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .about .container .row {
+    width: 40%;
+  }
+  .about .container .row:first-child:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 104px;
+    height: 90%;
+    top: -40px;
+    right: 26px;
+    z-index: -1;
+    border-left: 50px solid var(--main-color);
+    border-bottom: 46px solid var(--main-color);
+  }
+  .about .container .row:first-child {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .about .container .row:first-child img {
+    width: 200px;
+    height: 200px;
+  }
+}
+/* End About */
+/* Start Contact */
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.contact .container {
+  padding: 10px;
+  text-align: center;
+}
+.contact .container h2 {
+  font-size: 18px;
+  font-weight: bolder;
+  letter-spacing: -2px;
+  margin-bottom: 5px;
+  color: var(--second-color);
+}
+.contact .container a {
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: bolder;
+}
+.contact .container .social {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.contact .container .social span {
+  font-size: 12px;
+}
+.contact .container .social .brands {
+  margin-top: 5px;
+}
+
+.contact .container .social .brands i:not(:last-child) {
+  margin-right: 10px;
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+  .contact .container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 40px;
+    text-align: start;
+  }
+  .contact .container h2 {
+    font-size: 30px;
+  }
+  .contact .container a {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  .contact .container .social {
+    margin-left: 30px;
+    flex-direction: row;
+    align-items: center;
+  }
+  .contact .container .social .brands {
+    margin-left: 20px;
+  }
+}
+/* End Contact */
+/* Start Footer */
+.footer {
+  background-color: var(--second-color);
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+.footer p {
+  margin: 0;
+}
+.footer span {
+  color: var(--main-color);
+  font-weight: bold;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+/* End Footer */
