@@ -445,7 +445,6 @@ ul {
 .contact .container h2 {
   font-size: 18px;
   font-weight: bolder;
-  letter-spacing: -2px;
   margin-bottom: 5px;
   color: var(--second-color);
 }
